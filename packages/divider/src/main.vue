@@ -9,7 +9,7 @@
 </template>
 
 <script>
-export default {
+module.exports ={
   name: "ElDivider",
   props: {
     // 分割线方向

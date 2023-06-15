@@ -1,18 +1,23 @@
-//项目总入口
-// src/index.js
-import Button from '../packages/Button/index.js';
+
+import Button from '../packages/button/index.js';
 import Divider from '../packages/divider/index.js';
-
-const components = [Button,Divider];
-
-const install = (Vue) => {
-    components.forEach(component => {
-        Vue.component(component.name, component); // 每个组件需提供 name 属性
-    })
-}
-
-export default {
-    install,
+import Input from '../packages/input/index.js';
+import Message from '../packages/message/index.js';
+const components = [
     Button,
-    Divider
-}
+  Divider,
+  Input,
+  Message
+];
+const install = function(Vue, opts = {}) {
+  components.forEach(component => {
+    Vue.component(component.name, component);
+  });
+};
+export default {
+  install,
+    Button,
+  Divider,
+  Input,
+  Message
+};

@@ -1,11 +1,10 @@
+<template>
+  <div class="el-input">input</div>
+</template>
 
-    <template>
-      <div class="el-input">input</div>
-    </template>
+<script>
+export default {
+  name: 'ElInput'
+};
+</script>
 
-    <script>
-      export default {
-        name: 'ElInput'
-      };
-    </script>
-    

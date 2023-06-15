@@ -4,7 +4,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './examples/entry.js',
+    // entry: './examples/entry.js',
     output: {
         path: path.resolve(process.cwd(), './examples/element-ui/'),
         publicPath: '',
@@ -61,7 +61,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './examples/demo.html', // 模板文件
+            template: './examples/index.html', // 模板文件
             filename: './index.html', // 将生成的 HTML 写入到文件中, 默认写入在当前项目的 index.html 中。webpack-dev-server 启动一个服务, 默认会读取项目根目录下的 index.html, 所以 filename 最好是 index.html, 当然你要改也是可以的
         }),
         new VueLoaderPlugin(), // vue-loader的15版本之后, 都要求伴生使用 Plugin ：https://vue-loader.vuejs.org/migrating.html#a-plugin-is-now-required

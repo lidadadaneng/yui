@@ -1,8 +1,7 @@
+@import "mixins/mixins";
+@import "common/var";
 
-      @import "mixins/mixins";
-      @import "common/var";
+@include b(input) {
 
-      @include b(input) {
-        
-      }
-    
+}
+

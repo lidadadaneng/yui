@@ -1,5 +1,6 @@
 {
   "button": "./packages/button/index.js",
   "divider": "./packages/divider/index.js",
-  "input": "./packages/input/index.js"
+  "input": "./packages/input/index.js",
+  "message": "./packages/message/index.js"
 }
