@@ -1,0 +1,5 @@
+{
+  "button": "./packages/button/index.js",
+  "divider": "./packages/divider/index.js",
+  "input": "./packages/input/index.js"
+}
