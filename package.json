@@ -10,7 +10,8 @@
     "gen": "node build/bin/gen-cssfile.js",
     "new": "node build/bin/new.js",
     "build:entry": "node build/bin/build-entry.js",
-    "demo": "webpack-dev-server --config build/webpack.demo.js"
+    "demo": "webpack-dev-server --config build/webpack.demo.js",
+    "pack": "npm run build:theme && npm run build:entry &&npm run build && npm pack"
   },
   "keywords": [],
   "author": "",

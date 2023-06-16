@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Vue组件库测试</title>
-    <link rel="stylesheet" type="text/css" href="packages/theme-chalk/lib/index.css" />
+    <link rel="stylesheet" type="text/css" href="packages/theme-chalk/lib/index.css"/>
     <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
     <script src="https://unpkg.com/http-vue-loader"></script>
 </head>
 <body>
 <div id="app">
+    <button @click="showbutton">展示toast</button>
     <el-message></el-message>
 </div>
-<script type="text/javascript">
+<script type="module">
     var app = new Vue({
         el: '#app',
         data: {},
         components: {
             'ElMessage': httpVueLoader('../packages/message/src/main.vue')
+        },
+        methods: {
+            showbutton() {
+                this.$message('你好')
+            }
         }
     })
 </script>

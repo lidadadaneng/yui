@@ -2,40 +2,50 @@
 @import "common/var";
 
 @include b(message) {
-  background-color: $--border-color-base;
-  position: relative;
-  @include m(horizontal) {
-    display: block;
-    height: 1px;
-    width: 100%;
-    margin: 24px 0;
+  width: 380px;
+  min-height: 44px;
+  position: fixed;
+  z-index: 10000;
+  top: 20px;
+  left: 50%;
+  margin-left: -190px;
+  box-sizing: border-box;
+  padding: 0 8px 0 10px;
+  background: rgba(156,212,255,0.72);
+  border: 1px solid rgba(156,212,255,1);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: opacity .3s, transform .4s, top .4s;
+  display: flex;
+  align-items: center;
+
+  @include e(content){
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex: 1;
   }
-  @include m(vertical) {
-    display: inline-block;
-    width: 1px;
-    height: 1em;
-    margin: 0 8px;
-    vertical-align: middle;
-    position: relative;
-  }
-  @include e(text) {
-    position: absolute;
-    background-color: $--color-white;
-    padding: 0 20px;
-    font-weight: 500;
-    color: $--color-text-primary;
+  @include e(text){
+    color: #fff;
     font-size: 14px;
-    @include when(left) {
-      left: 20px;
-      transform: translateY(-50%);
-    }
-    @include when(center) {
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-    }
-    @include when(right) {
-      right: 20px;
-      transform: translateY(-50%);
-    }
+  }
+
+  @include e(close-btn) {
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+  @include m(success){
+    background: rgba(13,206,127,0.72);
+    border: 1px solid rgba(13,206,127,1);
+  }
+  @include m(error){
+    background: rgba(255,68,68,0.72);
+    border: 1px solid rgba(255,68,68,1);
+  }
+  @include m(warning){
+    background: rgba(254,132,86,0.72);
+    border: 1px solid rgba(254,132,86,1);
   }
 }
