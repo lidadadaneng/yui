@@ -1,6 +1,13 @@
 @import "mixins/mixins";
 @import "common/var";
 
+@include b(message-fade){
+  &-enter,&-leave-active{
+    opacity: 0;
+    transform: translate(0, -100%)
+  }
+
+}
 @include b(message) {
   width: 380px;
   min-height: 44px;
